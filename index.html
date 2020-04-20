@@ -7,27 +7,43 @@
     <div class="header">
         <h1> Welcome to Siqi's Secret Garden</h1>
     </div>
-    <div class="tabs">
-        <div>
-            <a href="index.html">Home</a>
-        </div>
-        <div>
-            <a href="photographs.html">Photographs</a>
-        </div>
-        <div>
-            <a href="videos.html">Videos</a>
-        </div>
-        <div>
-            <a href="sites.html">Favorite Websites</a>
-        </div>
-    </div>
+    <ul>
+        <li><a class="current" href="index.html">Home</a></li>
+        <li><a href="photographs.html">Photographs</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="sites.html">Favorite Websites</a></li>
+    </ul>
     <body>
         <div class="main-body">
-            <div>
-                <img id="self" src="images/me.jpg">
+            <div class="body1">
+                <img id="self" src="images/me.jpg" style="max-width:100%;height:auto">
             </div>
-            <div>
+            <div class="body2">
                 <p id="intro"> 
+                    This is Siqi. A girl who was born by the end of 20th century and who is passionate about life. 
+                    I am currently a third year Computer Science student in UCSB. 
+                    I like watch dramas, chat with people and I love singing. 
+                    In my mind, people can't live without music, just like they can't live without air.
+                    This website will be about myself as well as my life, academically and not academically.                
+                    Thank you for clicking in.
+                    This is Siqi. A girl who was born by the end of 20th century and who is passionate about life. 
+                    I am currently a third year Computer Science student in UCSB. 
+                    I like watch dramas, chat with people and I love singing. 
+                    In my mind, people can't live without music, just like they can't live without air.
+                    This website will be about myself as well as my life, academically and not academically.                
+                    Thank you for clicking in.
+                    This is Siqi. A girl who was born by the end of 20th century and who is passionate about life. 
+                    I am currently a third year Computer Science student in UCSB. 
+                    I like watch dramas, chat with people and I love singing. 
+                    In my mind, people can't live without music, just like they can't live without air.
+                    This website will be about myself as well as my life, academically and not academically.                
+                    Thank you for clicking in.
+                    This is Siqi. A girl who was born by the end of 20th century and who is passionate about life. 
+                    I am currently a third year Computer Science student in UCSB. 
+                    I like watch dramas, chat with people and I love singing. 
+                    In my mind, people can't live without music, just like they can't live without air.
+                    This website will be about myself as well as my life, academically and not academically.                
+                    Thank you for clicking in.
                     This is Siqi. A girl who was born by the end of 20th century and who is passionate about life. 
                     I am currently a third year Computer Science student in UCSB. 
                     I like watch dramas, chat with people and I love singing. 
@@ -37,5 +53,30 @@
                 </p>
             </div>
         </div>
+        <div class="return-top" id="return_top"><p>▲</p><p>back to top</p></div>
+        <script type=text/javascript>
+            var return_top = document.getElementById("return_top");
+            var sTop;
+            window.onscroll = function(){
+                sTop = document.body.scrollTop||document.documentElement.scrollTop;
+                if(sTop> document.body.scrollHeight*0.25){
+                    return_top.className = "return-top active";
+                }else{
+                    return_top.className = "return-top";
+                }
+            }
+    
+            return_top.onclick = function(){
+                var termId = setInterval(function(){
+                    sTop-=50;
+                    if(sTop<=0){
+    
+                        clearInterval(termId);
+                    }
+                    window.scrollTo(0,sTop);
+    
+                },1);       
+            }
+        </script>
     </body>
 </html>
