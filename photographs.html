@@ -7,68 +7,106 @@
     <div class="sub-header">
         <h1>Photographs</h1>
     </div>
-    <div class="tabs">
-        <div>
-            <a href="index.html">Home</a>
-        </div>
-        <div>
-            <a href="photograph.html">Photographs</a>
-        </div>
-        <div>
-            <a href="videos.html">Videos</a>
-        </div>
-        <div>
-            <a href="sites.html">Favorite Websites</a>
-        </div>
-    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="current" href="photographs.html">Photographs</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="sites.html">Favorite Websites</a></li>
+    </ul>
     <div class="des">
         <h2>Cities I have been to since 2018</h2>
     </div>
     <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <div class="photos">
-            <div>
-                <img id="dali" width="300" height="300" src="images/dali.jpg">
+            <div class="photo">
+                <img class="myimg" id="dali" width="300" height="300" src="images/dali.jpg">
                 <p>Dec 2018 in Dali</p>
             </div>
-            <div>
-                <img id="luoyang" width="300" height="300" src="images/luoyang.JPG">
+            <div class="photo">
+                <img class="myimg" id="luoyang" width="300" height="300" src="images/luoyang.JPG">
                 <p>Jun 2019 in Luoyang</p>
             </div>
-            <div>
-                <img id="wuhan" width="300" height="300" src="images/wuhan.jpg">
+            <div class="photo">
+                <img class="myimg" id="wuhan" width="300" height="300" src="images/wuhan.jpg">
                 <p>July 2018 in Wuhan</p>
             </div>
-            <div>
-                <img id="zhengzhou" width="300" height="300" src="images/zhengzhou.jpg">
+            <div class="photo">
+                <img class="myimg" id="zhengzhou" width="300" height="300" src="images/zhengzhou.jpg">
                 <p>August 2019 in Zhengzhou</p>
-            </div>
-        </div>
-        <div class="photos">       
-            <div>
-                <img id="inner mongolia" width="300" height="300" src="images/inner mongolia.JPG">
+            </div>       
+            <div class="photo">
+                <img class="myimg" id="inner mongolia" width="300" height="300" src="images/inner mongolia.JPG">
                 <p>Sep 2019 in Inner Mongolia</p>                
             </div>
-            <div>
-                <img id="inner mongolia" width="300" height="300" src="images/inner mongolia2.JPG">
+            <div class="photo">
+                <img class="myimg" id="inner mongolia1" width="300" height="300" src="images/inner mongolia2.JPG">
                 <p>Sep 2019 in Inner Mongolia</p>                
             </div>
-            <div>
-                <img id="san francisco" width="300" height="300" src="images/san francisco.jpg">
+            <div class="photo">
+                <img class="myimg" id="san francisco" width="300" height="300" src="images/san francisco.jpg">
                 <p>Dec 2019 in San Francisco</p>                
             </div>
-            <div>
-                <img id="santa barbara" width="300" height="300" src="images/santa barbara.jpg">
+            <div class="photo">
+                <img class="myimg" id="santa barbara" width="300" height="300" src="images/santa barbara.jpg">
                 <p>Jan 2020 in Santa Barbara</p>                
             </div>
-        </div>
-        <div class="photos">
-            <div>
-                <img id="Malibu" width="300" height="300" src="images/malibu.jpg">
+            <div class="photo">
+                <img class="myimg" id="Malibu" width="300" height="300" src="images/malibu.jpg">
                 <p>Feb 2020 in Malibu</p>                
             </div>
-            <div>
+            <div class="photo">
                 <font size="6">Coming Soon!</font>
             </div>
+            <div id="myModal" class="modal">
+                    <span class="close" onclick="document.getElementById('myModal').style.display='none'">×</span>
+                    <img class="modal-content" id="img01" width="600" height="600">
+                    <div id="caption">Cities I have been to since 2018</div>
+            </div>
         </div>
+        <script type=text/javascript>
+            var modal = document.getElementById('myModal');
+            var img = $('.myimg');
+            var modalImg = $("#img01");
+            $('.myimg').click(function(){
+                modal.style.display = "block";
+                var newSrc = this.src;
+                modalImg.attr('src', newSrc);
+            });
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() {          
+                modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+        <div class="return-top" id="return_top"><p>▲</p><p>back to top</p></div>
+        <script type=text/javascript>
+            var return_top = document.getElementById("return_top");
+            var sTop;
+            window.onscroll = function(){
+                sTop = document.body.scrollTop||document.documentElement.scrollTop;
+                if(sTop> document.body.scrollHeight*0.25){
+                    return_top.className = "return-top active";
+                }else{
+                    return_top.className = "return-top";
+                }
+            }
+    
+            return_top.onclick = function(){
+                var termId = setInterval(function(){
+                    sTop-=50;
+                    if(sTop<=0){
+    
+                        clearInterval(termId);
+                    }
+                    window.scrollTo(0,sTop);
+    
+                },1);       
+            }
+        </script>
     </body>
 </html>

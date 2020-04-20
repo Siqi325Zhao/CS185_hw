@@ -7,13 +7,47 @@
     font-family: Impact, Charcoal, sans-serif;
 }
 
-.tabs{
-    display: flex;
+ul{
+    font-family: "Arial Black", Gadget, sans-serif;
+    display:flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.tabs > div{
-    padding: 8px;
-    font-family: "Arial Black", Gadget, sans-serif;
+li{
+    float: left;
+    border: 1px solid black;
+}
+  
+li a{
+    display: block;
+    margin: 5px;
+    padding: 10px;
+    background-color: lightgreen;
+}
+
+li a:hover{
+    background-color: lightblue;
+}
+.current{
+    background-color: yellow;
+}
+
+.main-body{
+    max-width: 1200px;
+    margin: 80px auto 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body1{
+    flex:1;
+}
+
+.body2{
+    flex:2;
 }
 
 .des{
@@ -21,7 +55,16 @@
 }
 
 .photos{
+    max-width: 1400px;
+    margin: 40px auto 0 auto;
+    flex-wrap: wrap;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.photo:hover{
+    filter: grayscale(70%);
 }
 
 .photos > div{
@@ -29,8 +72,21 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.photo{
+    flex:1;
+}
+
 .videos{
+    max-width: 1400px;
+    margin: 40px auto 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
     display: flex;
+    justify-content: space-between;
+}
+
+.video{
+    flex:1;
 }
 
 .videos > div{
@@ -38,14 +94,26 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.links{
-    display: flex;
+.link{
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 1em;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .links > div{
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.pic{
+    flex:1;
+}
+
+.words{
+    flex:4;
 }
 
 #self{
@@ -56,13 +124,112 @@
 #intro{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.main-body{
-    display: flex;
-    padding: 3em;
-}
-
-#intro{
     padding: 1.5em;
+}
+
+.enlarged {
+    width: 400px;
+    height: 300px;
+}
+
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    display: block;
+    margin: auto;
+    height: 80%;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px){
+    .modal-content {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.return-top{
+    width:80px;
+    height:80px;
+    font:bold 50px/100px;
+    color:#fff;
+    background-color:black;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    text-align:center;
+    cursor:pointer;
+    display:none;
+}
+.return-top.active{
+    display: block;
 }

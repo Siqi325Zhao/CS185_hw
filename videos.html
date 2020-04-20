@@ -7,57 +7,73 @@
     <div class="sub-header">
         <h1>Videos</h1>
     </div>
-    <div class="tabs">
-        <div>
-            <a href="index.html">Home</a>
-        </div>
-        <div>
-            <a href="photographs.html">Photographs</a>
-        </div>
-        <div>
-            <a href="videos.html">Videos</a>
-        </div>
-        <div>
-            <a href="sites.html">Favorite Websites</a>
-        </div>
-    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="photographs.html">Photographs</a></li>
+        <li><a class="current" href="videos.html">Videos</a></li>
+        <li><a href="sites.html">Favorite Websites</a></li>
+    </ul>
     <div class="des">
             <h2>Videos that was made by me</h2>
     </div>
     <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <div class="videos">
-            <div>
-                <video width="300" height="300" controls>
+            <div class="video">
+                <video class="myVideo" width="300" height="300" controls>
                     <source src="images/Singing.mp4" type="video/mp4">
                 </video>
                 <p>Singing</p>
             </div>
-            <div>
-                <video width="300" height="300" controls>
+            <div class="video">
+                <video class="myVideo" width="300" height="300" controls>
                     <source src="images/changing clothes.MP4" type="video/mp4">
                 </video>
                 <p>Clothes Changing</p>
             </div>
-            <div>
-                <video width="300" height="300" controls>
+            <div class="video">
+                <video class="myVideo" width="300" height="300" controls>
                     <source src="images/Ciel's Bday.MP4" type="video/mp4">
                 </video>
                 <p>For Ciel's Birthday</p>
             </div>
-            <div>
-                <video width="300" height="300" controls>
+            <div class="video">
+                <video class="myVideo" width="300" height="300" controls>
                     <source src="images/Ciel.mp4" type="video/mp4">
                 </video>
                 <p>For Ciel</p>
             </div>              
-        </div>
-        <div class="videos">
-            <div>
-                <video width="300" height="300" controls>
+            <div class="video">
+                <video class="myVideo" width="300" height="300" controls>
                     <source src="images/dubbing.mov" type="video/mp4">
                     </video>
                <p>Dubbing</p>
-            </div>               
+            </div>
         </div>
-    </body>
+        <div class="return-top" id="return_top"><p>▲</p><p>back to top</p></div>
+        <script type=text/javascript>
+            var return_top = document.getElementById("return_top");
+            var sTop;
+            window.onscroll = function(){
+                sTop = document.body.scrollTop||document.documentElement.scrollTop;
+                if(sTop> document.body.scrollHeight*0.25){
+                    return_top.className = "return-top active";
+                }else{
+                    return_top.className = "return-top";
+                }
+            }
+    
+            return_top.onclick = function(){
+                var termId = setInterval(function(){
+                    sTop-=50;
+                    if(sTop<=0){
+    
+                        clearInterval(termId);
+                    }
+                    window.scrollTo(0,sTop);
+    
+                },1);       
+            }
+        </script>
+    </body> 
 </html>
