@@ -58,30 +58,33 @@
             <div class="photo">
                 <font size="6">Coming Soon!</font>
             </div>
-            <div id="myModal" class="modal">
-                    <span class="close" onclick="document.getElementById('myModal').style.display='none'">×</span>
-                    <img class="modal-content" id="img01" width="600" height="600">
-                    <div id="caption">Cities I have been to since 2018</div>
+            <div class="lightbox">
+                <div class=lightbox-content>
+                    <img class=lightbox-img src="" alt="img">
+                </div>
             </div>
         </div>
         <script type=text/javascript>
-            var modal = document.getElementById('myModal');
-            var img = $('.myimg');
-            var modalImg = $("#img01");
-            $('.myimg').click(function(){
-                modal.style.display = "block";
-                var newSrc = this.src;
-                modalImg.attr('src', newSrc);
-            });
-            var span = document.getElementsByClassName("close")[0];
-            span.onclick = function() {          
-                modal.style.display = "none";
+            const lightBoxContainer=document.querySelector(".lightbox");
+            const photos=document.querySelector(".photos").children;
+            const lightboxImage=document.querySelector(".lightbox-img");
+            let index;
+            let imgSrc;
+            for(let i=0;i<photos.length;i++){
+                photos[i].addEventListener("click", function(){
+                    index=i;
+                    changeImage();
+                    lightbox();
+                })
             }
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }   
+            function lightbox(){
+                lightBoxContainer.classList.toggle("open");
+            }
+            function changeImage(){
+                imgSrc=photos[index].querySelector("img").getAttribute("src");
+                lightboxImage.src=imgSrc;
+            }
+
         </script>
         <div class="return-top" id="return_top"><p>▲</p><p>back to top</p></div>
         <script type=text/javascript>
