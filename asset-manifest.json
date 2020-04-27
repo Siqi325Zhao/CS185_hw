@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/CS185_hw/static/css/main.5aabd7d6.chunk.css",
+    "main.js": "/CS185_hw/static/js/main.1cdc5111.chunk.js",
+    "main.js.map": "/CS185_hw/static/js/main.1cdc5111.chunk.js.map",
+    "runtime-main.js": "/CS185_hw/static/js/runtime-main.4a985614.js",
+    "runtime-main.js.map": "/CS185_hw/static/js/runtime-main.4a985614.js.map",
+    "static/js/2.bfaea79c.chunk.js": "/CS185_hw/static/js/2.bfaea79c.chunk.js",
+    "static/js/2.bfaea79c.chunk.js.map": "/CS185_hw/static/js/2.bfaea79c.chunk.js.map",
+    "index.html": "/CS185_hw/index.html",
+    "precache-manifest.61db225a17439cbb2768a6b70d1024a6.js": "/CS185_hw/precache-manifest.61db225a17439cbb2768a6b70d1024a6.js",
+    "service-worker.js": "/CS185_hw/service-worker.js",
+    "static/css/main.5aabd7d6.chunk.css.map": "/CS185_hw/static/css/main.5aabd7d6.chunk.css.map",
+    "static/js/2.bfaea79c.chunk.js.LICENSE.txt": "/CS185_hw/static/js/2.bfaea79c.chunk.js.LICENSE.txt",
+    "static/media/dali.jpg": "/CS185_hw/static/media/dali.a7e02074.jpg",
+    "static/media/inner mongolia.JPG": "/CS185_hw/static/media/inner mongolia.797919b2.JPG",
+    "static/media/inner mongolia2.JPG": "/CS185_hw/static/media/inner mongolia2.b289b90c.JPG",
+    "static/media/luoyang.JPG": "/CS185_hw/static/media/luoyang.8941c5f0.JPG",
+    "static/media/malibu.jpg": "/CS185_hw/static/media/malibu.e211a26e.jpg",
+    "static/media/me.jpg": "/CS185_hw/static/media/me.9144b758.jpg",
+    "static/media/netease.png": "/CS185_hw/static/media/netease.16be4206.png",
+    "static/media/san francisco.jpg": "/CS185_hw/static/media/san francisco.23f2085e.jpg",
+    "static/media/santa barbara.jpg": "/CS185_hw/static/media/santa barbara.3892e3e2.jpg",
+    "static/media/taobao.jpeg": "/CS185_hw/static/media/taobao.8d47da90.jpeg",
+    "static/media/wechat.png": "/CS185_hw/static/media/wechat.8e0f0a9a.png",
+    "static/media/wuhan.jpg": "/CS185_hw/static/media/wuhan.aa7b2efb.jpg",
+    "static/media/youtube.png": "/CS185_hw/static/media/youtube.8522159d.png",
+    "static/media/zhengzhou.jpg": "/CS185_hw/static/media/zhengzhou.bf7ac5a5.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4a985614.js",
+    "static/js/2.bfaea79c.chunk.js",
+    "static/css/main.5aabd7d6.chunk.css",
+    "static/js/main.1cdc5111.chunk.js"
+  ]
+}
