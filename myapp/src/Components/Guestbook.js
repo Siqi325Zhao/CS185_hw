@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import config from '../config'
-import { motion, useAnimation } from "framer-motion"
 const firebase = require('firebase')
 
 function Guestbook(props) {
@@ -12,13 +11,12 @@ function Guestbook(props) {
     const [message, setMessage]=useState("")
     const [visibility, setVisibility]=useState("")
     const [emailAddr, setEmailAddr]=useState("")
-    
+
     useEffect(() => {
         if (!firebase.apps.length) {
             firebase.initializeApp(config)
         }
         let ref = firebase.database().ref('messages')
-        var loaded = false
         ref.on('child_added', (childSnapshot, prevChildKey) => {
             const newChild = childSnapshot.val()
             setData(curData => [newChild, ...curData])
