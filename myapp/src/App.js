@@ -33,9 +33,14 @@ export class App extends Component {
       {
         id: 4,
         title: "Favorite Websites"
+      },
+      {
+        id: 5,
+        title: "Q&C"
       }
     ]
-    return(
+
+  return(
       <div>
         <div className='header'>
           <h1> Welcome to Siqi's Secret Garden</h1>
