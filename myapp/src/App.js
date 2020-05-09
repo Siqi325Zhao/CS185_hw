@@ -17,6 +17,7 @@ export class App extends Component {
     }
   }
   render(){
+    document.title = "Siqi Zhao"; 
     const tabs = [
       {
         id: 1,
