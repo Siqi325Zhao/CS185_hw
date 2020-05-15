@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
     "firebase": "^7.14.2",
     "framer-motion": "^1.10.3",
     "react": "^16.13.1",
@@ -17,6 +18,8 @@
     "react-scripts": "3.4.1",
     "react-scroll-up-button": "^1.6.4",
     "react-zmage": "^0.8.5-beta.31",
+    "simple-react-lightbox": "^2.8.0-5",
+    "ts-jest": "^25.5.1",
     "uikit-react": "^3.0.20"
   },
   "scripts": {

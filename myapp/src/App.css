@@ -94,3 +94,75 @@ h2{
 .message{
   color: blue;
 }
+
+.movcontainer {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 280px));
+}
+
+.movchild {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movchild img {
+  width: 250px;
+  height: auto;
+  border: 2px solid gray;
+  margin: 5px;
+}
+
+.mlb {
+  display: grid;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.8);
+  position: fixed;
+  align-content: center;
+}
+
+.mlb-container {
+  width: 650px;
+  margin: auto;
+  max-width: 750px;
+  background-color: #FFF;
+  border: 5px solid #FFF;
+  display: flex;
+  flex-direction: row;
+}
+
+.mlb-content {
+  height: 100%;
+  margin: auto;
+  float: left;
+  border: 5px solid #FFF;
+  outline: 1px solid #111;
+}
+
+.title {
+  color: black;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.director {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.rating {
+  background-color: lightseagreen;
+  border: 1px solid black;
+  color: #222;
+  padding: 3px 5px 3px 5px;
+}
+
+.mlb-info {
+  margin: 2em;
+}

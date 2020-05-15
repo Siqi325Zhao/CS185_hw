@@ -4,6 +4,7 @@ import Photographs from './Photographs'
 import Videos from './Videos'
 import FavoriteWebsites from './FavoriteWebsites'
 import Guestbook from './Guestbook'
+import Movies from './Movies'
 
 export class Body extends Component {
   displayContent=()=>{
@@ -16,8 +17,10 @@ export class Body extends Component {
       return <Videos/>
     else if(activeTab===4)
       return <FavoriteWebsites/>
-    else
+    else if(activeTab===5)
       return <Guestbook/>
+    else
+      return <Movies/>
   }
   render(){
     return(this.displayContent());
