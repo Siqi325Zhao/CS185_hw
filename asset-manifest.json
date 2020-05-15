@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/CS185_hw/static/css/main.1199fa72.chunk.css",
+    "main.css": "/CS185_hw/static/css/main.9b97c7ac.chunk.css",
     "main.js": "/CS185_hw/static/js/main.25c68fc1.chunk.js",
     "main.js.map": "/CS185_hw/static/js/main.25c68fc1.chunk.js.map",
     "runtime-main.js": "/CS185_hw/static/js/runtime-main.4a985614.js",
@@ -8,9 +8,9 @@
     "static/js/2.d78e648d.chunk.js": "/CS185_hw/static/js/2.d78e648d.chunk.js",
     "static/js/2.d78e648d.chunk.js.map": "/CS185_hw/static/js/2.d78e648d.chunk.js.map",
     "index.html": "/CS185_hw/index.html",
-    "precache-manifest.22b5294a740c4c39b32d0112df513ef5.js": "/CS185_hw/precache-manifest.22b5294a740c4c39b32d0112df513ef5.js",
+    "precache-manifest.7c71b780c6d50820684e7d44b01f8878.js": "/CS185_hw/precache-manifest.7c71b780c6d50820684e7d44b01f8878.js",
     "service-worker.js": "/CS185_hw/service-worker.js",
-    "static/css/main.1199fa72.chunk.css.map": "/CS185_hw/static/css/main.1199fa72.chunk.css.map",
+    "static/css/main.9b97c7ac.chunk.css.map": "/CS185_hw/static/css/main.9b97c7ac.chunk.css.map",
     "static/js/2.d78e648d.chunk.js.LICENSE.txt": "/CS185_hw/static/js/2.d78e648d.chunk.js.LICENSE.txt",
     "static/media/dali.jpg": "/CS185_hw/static/media/dali.a7e02074.jpg",
     "static/media/inner mongolia.JPG": "/CS185_hw/static/media/inner mongolia.797919b2.JPG",
@@ -30,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.4a985614.js",
     "static/js/2.d78e648d.chunk.js",
-    "static/css/main.1199fa72.chunk.css",
+    "static/css/main.9b97c7ac.chunk.css",
     "static/js/main.25c68fc1.chunk.js"
   ]
 }
