@@ -19,7 +19,7 @@ export class Body extends Component {
       return <FavoriteWebsites/>
     else if(activeTab===5)
       return <Guestbook/>
-    else
+    else if(activeTab===6)
       return <Movies/>
   }
   render(){
