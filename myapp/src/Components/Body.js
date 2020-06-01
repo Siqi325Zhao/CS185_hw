@@ -5,6 +5,8 @@ import Videos from './Videos'
 import FavoriteWebsites from './FavoriteWebsites'
 import Guestbook from './Guestbook'
 import Movies from './Movies'
+import AddMovie from './AddMovie'
+import CreateList from './CreateList'
 
 export class Body extends Component {
   displayContent=()=>{
@@ -21,6 +23,10 @@ export class Body extends Component {
       return <Guestbook/>
     else if(activeTab===6)
       return <Movies/>
+    else if(activeTab===7)
+      return <AddMovie/>
+    else
+      return <CreateList/>
   }
   render(){
     return(this.displayContent());
