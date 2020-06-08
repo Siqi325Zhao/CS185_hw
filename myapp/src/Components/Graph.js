@@ -9,101 +9,95 @@ const data={
 		"nodes": [
 		  {
 			"id": 1,
-			"name": "Andy",
-			"gender": "male"
+			"name": "A",
+			"group": 1,
 		  },
 		  {
 			"id": 2,
-			"name": "Betty",
-			"gender": "female"
+			"name": "B",
 		  },
 		  {
 			"id": 3,
-			"name": "Cate",
-			"gender": "female"
+			"name": "C",
 		  },
 		  {
 			"id": 4,
-			"name": "Dave",
-			"gender": "male"
+			"name": "D",
+			"group": 1,
 		  },
 		  {
 			"id": 5,
-			"name": "Ellen",
-			"gender": "female"
+			"name": "E",
 		  },
 		  {
 			"id": 6,
-			"name": "Fiona",
-			"gender": "female"
+			"name": "F",
 		  },
 		  {
 			"id": 7,
-			"name": "Garry",
-			"gender": "male"
+			"name": "G",
 		  },
 		  {
 			"id": 8,
-			"name": "Holly",
-			"gender": "female"
+			"name": "H",
+			"group": 1,
 		  },
 		  {
 			"id": 9,
-			"name": "Iris",
-			"gender": "female"
+			"name": "I",
 		  },
 		  {
 			"id": 10,
-			"name": "Jane",
-			"gender": "female"
+			"name": "J",
+			"group": 1,
 		  }
 		],
 		"links": [
 		  {
 			"source": 1,
-			"target": 2
+			"target": 9
 		  },
-		  {
-			"source": 1,
-			"target": 5
-		  },
-		  {
-			"source": 1,
-			"target": 6
-		  },
-	  
 		  {
 			"source": 2,
 			"target": 3
 		  },
 		  {
-			"source": 2,
+			"source": 3,
+			"target": 1
+		  },
+	  
+		  {
+			"source": 4,
+			"target": 2
+		  },
+		  {
+			"source": 5,
+			"target": 10
+		  }
+		,
+	  
+		  {
+			"source": 6,
+			"target": 4
+		  },
+		  {
+			"source": 7,
+			"target": 6
+		  }
+		,
+		  {
+			"source": 8,
 			"target": 7
 		  }
 		,
 	  
 		  {
-			"source": 3,
+			"source": 9,
 			"target": 4
 		  },
 		  {
-			"source": 8,
-			"target": 3
-		  }
-		,
-		  {
-			"source": 4,
+			"source": 10,
 			"target": 5
-		  }
-		,
-	  
-		  {
-			"source": 4,
-			"target": 9
-		  },
-		  {
-			"source": 5,
-			"target": 10
 		  }
 		]
 }
@@ -164,12 +158,12 @@ export class Graph extends Component {
 		const radius = (node) => {
 			if (node.group ==1)
 				return 20;
-			return 70;
+			return 65;
 		}
 
 		const image = (node) => {
 			if(node.group ===1)
-				return d3.color("blue");
+				return d3.color("green");
 			else if(node.group ===2)
 				return 'url(#' + node.name.replace(/[^\w\s]/gi, "").split(' ').join('');
 		}
@@ -269,10 +263,10 @@ export class Graph extends Component {
     	const moviesRef = firebase.database().ref('lists').child('Graph');
 	    moviesRef.on('value', snapshot => {
 	    	snapshot.forEach(movie => {
-	    		let title = movie.val().Title;
+				let title = movie.val().Title;
 	    		let actors = movie.val().Actors;
 	    		let imdbID = movie.val().imdbID;
-	    		let poster = movie.val().Poster
+	    		let poster = movie.val().Poster;
 	    		currentNodeID++;
 	    		let currentMovieID = currentNodeID;
 	    		nodes = nodes.concat([{
@@ -313,9 +307,9 @@ export class Graph extends Component {
 	      				[imdbID]: movie.val()
 	      			}
 	     		}));
-	    	});
+			});
 	    const elem = document.getElementById("mysvg");
-    	elem.appendChild(this.chart(data.nodes, data.links));
+    	elem.appendChild(this.chart(nodes, links));
     	});
 	}
 
