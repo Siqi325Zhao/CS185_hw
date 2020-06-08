@@ -466,3 +466,50 @@ textarea {
     opacity: 1;
   }
 }
+.message {
+  font-size: smaller;
+  margin: 0;
+  padding-left: 5px;
+
+}
+
+.description {
+  font-style: italic;
+  font-size: smaller;
+  margin: 0;
+  padding-left: 5px;
+}
+
+.name {
+  margin: 0;
+}
+
+.date {
+  font-size: small;
+  margin: 0;
+  color: #f07477;
+}
+
+.formStatus {
+  color: #f07477;
+}
+
+.inline {
+  display: flex;
+}
+.center {
+  display:flex;
+  justify-content: center;
+}
+
+.graph {
+  background-color: steelblue;
+}
+
+#mysvg {
+  width: 1920px;
+}
+
+.node text {
+  color: white;
+}

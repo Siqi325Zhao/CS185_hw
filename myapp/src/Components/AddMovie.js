@@ -46,7 +46,6 @@ export class AddMovie extends Component {
 				formStatus = "Movie already added!";
 			}
 		});
-						console.log(formStatus)
 
 	  	this.setState({
 	  		movie: '',

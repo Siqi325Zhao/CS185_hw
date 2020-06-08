@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import config from '../config.js';
+import config from '../config';
 import Dropdown from './Dropdown';
 
 const firebase = require('firebase');
@@ -155,7 +155,6 @@ export class Movies extends Component {
 
 		const listsRef = firebase.database().ref('lists').child(item);
 		listsRef.child(currentMovie).set(currentMovieObject);
-		console.log(this.state.lists);
 	}
 
 	render() {
@@ -171,7 +170,7 @@ export class Movies extends Component {
 				<div class="top">
 					<div>
 						<Dropdown name={this.state.currentListName} items={this.state.currentLists} handleClick={this.goToList}/>
-						<input type="search" name="search" placeholder="Search" onChange={this.handleChange}/>
+						<input type="text" name="search" placeholder="Search..." onChange={this.handleChange}/>
 					</div>
 				</div>
 				<div>
@@ -186,9 +185,9 @@ export class Movies extends Component {
 					{movies.map((movie) => (
 						<a href="#" class="lightbox" onClick={this.revealScroll.bind(this)} id={movie.Title} >
 						  	<img src={movie.Poster} alt={movie.Title}/>
-                <p>{movie.Title} ---- Rating: {movie.imdbRating}</p>
-						 	  <p> Director: {movie.Director}</p>
-                <p>{movie.Plot}</p>
+                            <p>{movie.Title} ---- Rating: {movie.imdbRating}</p>
+						 	<p> Director: {movie.Director}</p>
+                            <p>{movie.Plot}</p>
 							<button onClick={this.deleteMovie.bind(this)}> Delete </button>
 							<Dropdown name="Add to list" items={listsToAddTo} handleClick={this.addToList}/>
 						</a>

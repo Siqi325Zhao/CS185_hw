@@ -33,7 +33,7 @@ export class App extends Component {
       },
       {
         id: 4,
-        title: "Favorite Websites"
+        title: "FavSites"
       },
       {
         id: 5,
@@ -45,16 +45,20 @@ export class App extends Component {
       },
       {
         id: 7,
-        title: 'Add Movie',
+        title: 'NewMovie',
       },
       {
         id: 8,
-        title: 'Create List',
+        title: 'NewList',
+      },
+      {
+        id: 9,
+        title: 'Graph',
       }
     ]
 
   return(
-      <div>
+      <div className="111">
         <div className='header'>
           <h1> Welcome to Siqi's Secret Garden</h1>
         </div>

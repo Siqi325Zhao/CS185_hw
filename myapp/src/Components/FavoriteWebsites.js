@@ -4,6 +4,9 @@ export class FavoriteWebsites extends Component {
     render(){
         return(
         <div class="links">
+            <h2>
+                These are my favorite websites.
+            </h2>
             <div class="link">
                 <img className = "myimgs" src={ require('./images/youtube.png') } alt = "sites" style = {{float:'center', width:'25%'}}></img>
                 <a href="https://www.youtube.com/">Youtube</a>
