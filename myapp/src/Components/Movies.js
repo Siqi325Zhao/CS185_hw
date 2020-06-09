@@ -152,7 +152,6 @@ export class Movies extends Component {
 	addToList = (item) => {
 		const currentMovie = this.state.currentMovie;
 		const currentMovieObject = this.state.movies[currentMovie];
-
 		const listsRef = firebase.database().ref('lists').child(item);
 		listsRef.child(currentMovie).set(currentMovieObject);
 	}

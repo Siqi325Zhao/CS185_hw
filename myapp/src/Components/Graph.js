@@ -261,7 +261,6 @@ export class Graph extends Component {
 		let currentLinkID = -1;
 
 		const moviesRef = firebase.database().ref('lists').child('Graph');
-		console.log(moviesRef);
 	    moviesRef.on('value', snapshot => {
 	    	snapshot.forEach(movie => {
 				let title = movie.val().Title;
