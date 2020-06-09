@@ -157,8 +157,8 @@ export class Graph extends Component {
 
 		const radius = (node) => {
 			if (node.group ==1)
-				return 20;
-			return 65;
+				return 15;
+			return 50;
 		}
 
 		const image = (node) => {
@@ -183,9 +183,9 @@ export class Graph extends Component {
 		}
 
 		const simulation = d3.forceSimulation(obj_nodes)
-			.force("link", d3.forceLink().links(links).id(d => { return d.index; }).distance(200))
+			.force("link", d3.forceLink().links(links).id(d => { return d.index; }).distance(100))
 			.force("charge", d3.forceManyBody())
-			.force("center", d3.forceCenter(width/2, height/2));
+			.force("center", d3.forceCenter(width/3.5, height/3.5));
 
 		svg.append("g")
 			.selectAll("circle")

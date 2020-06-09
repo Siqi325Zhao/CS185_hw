@@ -167,14 +167,14 @@ export class Movies extends Component {
 		let listsToAddTo = Object.values(this.state.listsToAddTo);
 		return (
 			<div>
-				<div class="top">
+				<div className="top">
 					<div>
 						<Dropdown name={this.state.currentListName} items={this.state.currentLists} handleClick={this.goToList}/>
 						<input type="text" name="search" placeholder="Search..." onChange={this.handleChange}/>
 					</div>
 				</div>
 				<div>
-					<section class="movies">
+					<section className="movies">
 						{movies.slice(0,this.state.view).map((movie) =>{
 							let hrefID = '#' + movie.Title;
 							return (<a href={hrefID}>
@@ -183,7 +183,7 @@ export class Movies extends Component {
 						})}
 					</section>
 					{movies.map((movie) => (
-						<a href="#" class="lightbox" onClick={this.revealScroll.bind(this)} id={movie.Title} >
+						<a href="#" className="lightbox" onClick={this.revealScroll.bind(this)} id={movie.Title} >
 						  	<img src={movie.Poster} alt={movie.Title}/>
                             <p>{movie.Title} ---- Rating: {movie.imdbRating}</p>
 						 	<p> Director: {movie.Director}</p>
